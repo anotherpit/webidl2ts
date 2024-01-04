@@ -93,6 +93,29 @@ function emscriptenAdditions() {
     ], 
     /* type           */ ts.factory.createKeywordTypeNode(ts.SyntaxKind.VoidKeyword), 
     /* body           */ undefined));
+    //     function getPointer(obj: any): number;
+    result.push(ts.factory.createFunctionDeclaration(
+    /* modifiers      */ [], 
+    /* asteriskToken  */ undefined, 
+    /* name           */ 'getPointer', 
+    /* typeParameters */ [], 
+    /* parameters     */ [
+        ts.factory.createParameterDeclaration([], undefined, 'obj', undefined, ts.factory.createKeywordTypeNode(ts.SyntaxKind.AnyKeyword)),
+    ], 
+    /* type           */ ts.factory.createTypeReferenceNode('number'), 
+    /* body           */ undefined));
+    //     function compare(obj1: any, obj2: any): boolean;
+    result.push(ts.factory.createFunctionDeclaration(
+    /* modifiers      */ [], 
+    /* asteriskToken  */ undefined, 
+    /* name           */ 'compare', 
+    /* typeParameters */ [], 
+    /* parameters     */ [
+        ts.factory.createParameterDeclaration([], undefined, 'obj1', undefined, ts.factory.createKeywordTypeNode(ts.SyntaxKind.AnyKeyword)),
+        ts.factory.createParameterDeclaration([], undefined, 'obj2', undefined, ts.factory.createKeywordTypeNode(ts.SyntaxKind.AnyKeyword)),
+    ], 
+    /* type           */ ts.factory.createTypeReferenceNode('boolean'), 
+    /* body           */ undefined));
     // adds malloc function
     //
     //     function _malloc(size: number): number;
